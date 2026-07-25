@@ -2,7 +2,7 @@
 include "templates/header.php";
 ?>
 <main>
-<form action="handlers/create.php" method="post">
+<form action="handlers/create.php" method="post" enctype="multipart/form-data">
     <label for="name">
         Name: 
         <input type="text" name="name" id="name" required>
@@ -19,7 +19,7 @@ include "templates/header.php";
     </label>
     <label for="hp">
         Max HP:
-        <input type="number" name="hp" id="hp">
+        <input type="number" name="hp" id="hp" required>
         <br>
     </label>
     <label for="gold">
