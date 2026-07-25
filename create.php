@@ -18,7 +18,7 @@ include "templates/header.php";
         <br>
     </label>
     <label for="hp">
-        HP:
+        Max HP:
         <input type="number" name="hp" id="hp">
         <br>
     </label>
@@ -43,7 +43,7 @@ include "templates/header.php";
         <input type="file" name="avatar" id="avatar" required>
     </label>
     <br>
-    <input type="submit" value="Create">
+    <button type="submit">Create Character</button>
 </form>
 </main>
 <?php
