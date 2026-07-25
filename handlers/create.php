@@ -24,8 +24,8 @@ if ($_POST) {
         mkdir($img_dir,0777);
         echo "img dir create (was not existen before)<br>";
     }
-
-    if ($_FILES["avatar"]["tmp_name"] != "") { //check si extiste algun archivo
+    
+    if ($_FILES["avatar"]["tmp_name"] != "") { //check si extiste
         $img_name = time() . "_" . $_FILES['avatar']['name'];
         $img_path = $img_dir . "/" . $img_name;
 

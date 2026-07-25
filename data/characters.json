@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Empty char",
+        "class": "support",
+        "HP": "0",
+        "gold": "",
+        "inventory": [],
+        "avatar": ""
+    },
+    {
+        "name": "Isabella",
+        "class": "magician",
+        "HP": "50",
+        "gold": "",
+        "inventory": [
+            "Magic Book"
+        ],
+        "avatar": ""
+    },
+    {
+        "name": "Boss",
+        "class": "warrior",
+        "HP": "100",
+        "gold": "100",
+        "inventory": [
+            "Sword",
+            "Potion",
+            "Magic Book"
+        ],
+        "avatar": "..\/img-uploads\/1785004823_cropped-Templeos-header.png"
+    },
+    {
+        "name": "Main Char",
+        "class": "warrior",
+        "HP": "90",
+        "gold": "100",
+        "inventory": [
+            "Sword",
+            "Potion"
+        ],
+        "avatar": "..\/img-uploads\/1785005054_blog_pfp.jpeg"
+    }
+]
