@@ -2,7 +2,7 @@
 include "templates/header.php";
 ?>
 <main>
-<form action="" method="post">
+<form action="handlers/create.php" method="post">
     <label for="name">
         Name: 
         <input type="text" name="name" id="name" required>
@@ -29,18 +29,18 @@ include "templates/header.php";
     </label>
     <fieldset>
         <legend>Inventory</legend>
-        <input type="checkbox" name="sword" id="sword">
+        <input type="checkbox" name="inventory[]" id="sword" value="Sword">
         <label for="sword">Sword</label>
 
-        <input type="checkbox" name="potion" id="potion">
+        <input type="checkbox" name="inventory[]" id="potion" value="Potion">
         <label for="potion">Potion</label>
         
-        <input type="checkbox" name="magic-book" id="magic-book">
+        <input type="checkbox" name="inventory[]" id="magic-book" value="Magic Book">
         <label for="magic-book">Magic Book</label>
     </fieldset>
     <label for="avatar">
         Avatar:
-        <input type="file" name="avatar" id="avatar" required>
+        <input type="file" name="avatar" id="avatar" >
     </label>
     <br>
     <button type="submit">Create Character</button>
