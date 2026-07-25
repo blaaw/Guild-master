@@ -39,5 +39,14 @@
             "Potion"
         ],
         "avatar": "..\/img-uploads\/1785005054_blog_pfp.jpeg"
+    },
+    {
+        "id": "6a6519ce406f8",
+        "name": "name trial",
+        "class": "warrior",
+        "HP": "352",
+        "gold": "90",
+        "inventory": [],
+        "avatar": ""
     }
 ]

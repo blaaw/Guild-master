@@ -1,22 +1,22 @@
 <?php
-//INFO ABOUT FILES, POST, SERVER
+if ($_POST) {
+   /*
+    INFO ABOUT FILES, POST, SERVER
     echo '<pre>';
     echo "FILES vardump contents: <br>";
     var_dump($_FILES);
     echo '</pre>';
     
-if ($_POST) {
-    /*
     echo '<pre>';
     echo "SERVER contents: <br>";
     var_dump($_SERVER);
     echo '</pre>';
-    */
+
     echo '<pre>';
     echo "POST vardump contents: <br>";
     var_dump($_POST);
     echo '</pre>';
-
+    */
 
     //IMAGE HANDLER
     $img_dir = '../img-uploads';
@@ -24,7 +24,8 @@ if ($_POST) {
         mkdir($img_dir,0777);
         echo "img dir create (was not existen before)<br>";
     }
-    
+   
+    $img_path = "";
     if ($_FILES["avatar"]["tmp_name"] != "") { //check si extiste
         $img_name = time() . "_" . $_FILES['avatar']['name'];
         $img_path = $img_dir . "/" . $img_name;
@@ -41,19 +42,18 @@ if ($_POST) {
         echo "data dir create (was not existen before) <br>";
     } 
     
-    $characters_file = "../data/characters.json";
-    $characters = file_exists($characters_file) ? json_decode(file_get_contents($characters_file)) : [];
-    
+   include "../includes/db.php";
+   $characters = getCharacters();
+
     $characters[] = [ //this is the syntax to append to an array
+        "id" => uniqid(),
         "name" => $_POST["name"],
         "class"=> $_POST["class"],
         "HP"=> $_POST["hp"],
         "gold"=> $_POST["gold"],
         "inventory"=> $_POST["inventory"] ?? [],
-        "avatar"=> $img_path ?? "" 
+        "avatar"=> $img_path 
     ];
     
-    if(file_put_contents($characters_file,json_encode($characters,JSON_PRETTY_PRINT))){
-        echo "Character created and added to the Json database succesfully!";
-    }  
+    saveCharacters($characters);
 }
