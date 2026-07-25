@@ -1,0 +1,10 @@
+services:
+  php:
+    image: php:8.3-cli
+    container_name: guild-master
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8000"
+    command: php -S 0.0.0.0:8000
