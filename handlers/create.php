@@ -1,10 +1,10 @@
 <?php
+session_start();
 if ($_POST) {
     //IMAGE HANDLER
     $img_dir = '../img-uploads';
     if (!is_dir($img_dir)) {
         mkdir($img_dir,0777);
-        echo "img dir create (was not existen before)<br>";
     }
    
     $img_path = "";
@@ -12,16 +12,13 @@ if ($_POST) {
         $img_name = time() . "_" . $_FILES['avatar']['name'];
         $img_path = $img_dir . "/" . $img_name;
 
-        if (move_uploaded_file($_FILES['avatar']['tmp_name'], $img_path)) { // haz la accion y si sale bien ...
-            echo 'succesful image upload to' . $img_dir . "! <br>";
-        }
+        move_uploaded_file($_FILES['avatar']['tmp_name'], $img_path);
     }
     
     //JSON ENCODING & DATA HANDLER
     $data_dir = '../data';
     if (!is_dir($data_dir)) {
         mkdir($data_dir,0777);
-        echo "data dir create (was not existen before) <br>";
     } 
     
    include "../includes/db.php";
@@ -37,7 +34,12 @@ if ($_POST) {
         "avatar"=> $img_path 
     ];
     
-    saveCharacters($characters);
+    if (saveCharacters($characters)) {
+        //for this to work and redirect, no echoes 
+        $_SESSION["flash"] = "Character added succesfully!";
+        header("Location:../index.php");
+        exit;
+    }
 }   
 /*
     INFO ABOUT FILES, POST, SERVER

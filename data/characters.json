@@ -1,52 +1,38 @@
 [
     {
-        "name": "Empty char",
-        "class": "support",
-        "HP": "0",
-        "gold": "",
-        "inventory": [],
-        "avatar": ""
+        "id": "6a652cdce8def",
+        "name": "Bairon",
+        "class": "warrior",
+        "HP": "222",
+        "gold": "22",
+        "inventory": [
+            "Sword",
+            "Potion"
+        ],
+        "avatar": "..\/img-uploads\/1785015516_favicon-B.png"
     },
     {
-        "name": "Isabella",
-        "class": "magician",
-        "HP": "50",
-        "gold": "",
+        "id": "6a652cffa5c31",
+        "name": "Amathyst",
+        "class": "support",
+        "HP": "156",
+        "gold": "43",
         "inventory": [
             "Magic Book"
         ],
         "avatar": ""
     },
     {
-        "name": "Boss",
-        "class": "warrior",
+        "id": "6a652d2bcbf2d",
+        "name": "Miss Hill",
+        "class": "support",
         "HP": "100",
-        "gold": "100",
+        "gold": "",
         "inventory": [
             "Sword",
             "Potion",
             "Magic Book"
         ],
-        "avatar": "..\/img-uploads\/1785004823_cropped-Templeos-header.png"
-    },
-    {
-        "name": "Main Char",
-        "class": "warrior",
-        "HP": "90",
-        "gold": "100",
-        "inventory": [
-            "Sword",
-            "Potion"
-        ],
-        "avatar": "..\/img-uploads\/1785005054_blog_pfp.jpeg"
-    },
-    {
-        "id": "6a6519ce406f8",
-        "name": "name trial",
-        "class": "warrior",
-        "HP": "352",
-        "gold": "90",
-        "inventory": [],
-        "avatar": ""
+        "avatar": "..\/img-uploads\/1785015595_lauryn-hill.jpeg"
     }
 ]
