@@ -1,23 +1,5 @@
 <?php
 if ($_POST) {
-   /*
-    INFO ABOUT FILES, POST, SERVER
-    echo '<pre>';
-    echo "FILES vardump contents: <br>";
-    var_dump($_FILES);
-    echo '</pre>';
-    
-    echo '<pre>';
-    echo "SERVER contents: <br>";
-    var_dump($_SERVER);
-    echo '</pre>';
-
-    echo '<pre>';
-    echo "POST vardump contents: <br>";
-    var_dump($_POST);
-    echo '</pre>';
-    */
-
     //IMAGE HANDLER
     $img_dir = '../img-uploads';
     if (!is_dir($img_dir)) {
@@ -56,4 +38,21 @@ if ($_POST) {
     ];
     
     saveCharacters($characters);
-}
+}   
+/*
+    INFO ABOUT FILES, POST, SERVER
+    echo '<pre>';
+    echo "FILES vardump contents: <br>";
+    var_dump($_FILES);
+    echo '</pre>';
+    
+    echo '<pre>';
+    echo "SERVER contents: <br>";
+    var_dump($_SERVER);
+    echo '</pre>';
+
+    echo '<pre>';
+    echo "POST vardump contents: <br>";
+    var_dump($_POST);
+    echo '</pre>';
+    */
