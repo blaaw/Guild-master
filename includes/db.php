@@ -7,6 +7,16 @@ function getCharacters() {
     return $characters;
 }
 
+function findCharacter($charname) {
+    $allcharacters = getCharacters();
+    foreach($allcharacters as $c) {
+        if ($c['name'] === $charname) {
+            return $c;
+        } 
+    }
+    return "";
+}
+
 function saveCharacters($characters) {
     $characters_file = __DIR__ . "/../data/characters.json";
     if(file_put_contents($characters_file,json_encode($characters,JSON_PRETTY_PRINT))){
