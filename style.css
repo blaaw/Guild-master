@@ -3,3 +3,8 @@ main {
     width: 100%;
 }
 
+.char-card {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0.5rem;
+}
