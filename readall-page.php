@@ -2,6 +2,6 @@
 include "templates/header.php";
 include "handlers/read.php";
 
-echo getCharactersCards();
+echo getAllCharactersCards();
 
 include "templates/footer.php";

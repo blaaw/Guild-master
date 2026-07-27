@@ -3,13 +3,11 @@ include( __DIR__ . "/../includes/db.php");
 // FUNCIONA PERO SI LO MUEVO A ROOT NO VA, SI LO LLAMO DESDE INCLUDE NO VA, SI NOSE QUE POLLAS QUE LE FOLLEN
 
 //despues de todo al final pude hacerlo como yo queria, nose porque siento que es un chin rebundante pero bueno
-function getCharactersCards() {
 
-$characters = getCharacters();
-$charHTML = "";
-
-foreach($characters as $character) {
+function formatCard($character) {
+    $charHTML = "";
     $inventoryHTML = "";
+
     foreach ($character['inventory'] as $item) {
         $inventoryHTML .= "<li>{$item}</li>";
     }
@@ -24,14 +22,25 @@ foreach($characters as $character) {
             {$inventoryHTML}
             </ul>
     </div>";
+
+    return $charHTML;
 }
-$cards = "<div class='cards'>" . $charHTML . "</div>";
-return $cards;
+
+function getAllCharactersCards() {
+    $characters = getCharacters();
+    $charactersHTML = "";
+
+    foreach($characters as $character) {
+        $charactersHTML .= formatCard($character);
+    }
+    
+    $cards = "<div class='cards'>" . $charactersHTML . "</div>";
+    return $cards;
 }
 
-function findOneCharacter($charname) {
-    $allchars = getCharactersCards();
-
-
+function getSingleCharacterCard($charname) {
+    //findCharacher($charname) implemented in db.php
+    //formatCard($charname) from the result of previous stmt
+    //return card
 
 }
