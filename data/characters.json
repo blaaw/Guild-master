@@ -34,5 +34,27 @@
             "Magic Book"
         ],
         "avatar": "..\/img-uploads\/1785015595_lauryn-hill.jpeg"
+    },
+    {
+        "id": "6a66c96b19de2",
+        "name": "MARIO",
+        "class": "support",
+        "HP": "90",
+        "gold": "67",
+        "inventory": [
+            "Magic Book"
+        ],
+        "avatar": "..\/img-uploads\/1785121131_blog_pfp.jpeg"
+    },
+    {
+        "id": "6a6768b2346b2",
+        "name": "YO SOY LA SUNAMITAA",
+        "class": "warrior",
+        "HP": "999999",
+        "gold": "0",
+        "inventory": [
+            "Sword"
+        ],
+        "avatar": ""
     }
 ]

@@ -14,7 +14,7 @@ include "templates/header.php";
    <h3>Acciones que hacer:</h3>
    <ul>
       <li><a href="create-form.php">Create new Character</a></li>
-      <li><a href="handlers/read-allchar.php">See all Charactes (temporal URL)</a></li>
+      <li><a href="readall-page.php">See all Charactes</a></li>
     </ul>
 <?php
 include "templates/footer.php";

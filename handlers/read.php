@@ -1,7 +1,10 @@
 <?php
-include("../templates/header.php");
-include("../includes/db.php");
+include( __DIR__ . "/../includes/db.php");
 // FUNCIONA PERO SI LO MUEVO A ROOT NO VA, SI LO LLAMO DESDE INCLUDE NO VA, SI NOSE QUE POLLAS QUE LE FOLLEN
+
+//despues de todo al final pude hacerlo como yo queria, nose porque siento que es un chin rebundante pero bueno
+function getCharactersCards() {
+
 $characters = getCharacters();
 $charHTML = "";
 
@@ -22,5 +25,13 @@ foreach($characters as $character) {
             </ul>
     </div>";
 }
-echo "<div class='cards'>" . $charHTML . "</div>";
-include("../templates/footer.php");
+$cards = "<div class='cards'>" . $charHTML . "</div>";
+return $cards;
+}
+
+function findOneCharacter($charname) {
+    $allchars = getCharactersCards();
+
+
+
+}
