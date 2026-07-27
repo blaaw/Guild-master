@@ -10,13 +10,12 @@ include "templates/header.php";
    <?php unset($_SESSION["flash"]); ?>   
 <?php endif?>
 
-<main>
    <h2>Welcome to the index.php file </h2>   
    <h3>Acciones que hacer:</h3>
    <ul>
       <li><a href="create-form.php">Create new Character</a></li>
+      <li><a href="handlers/read-allchar.php">See all Charactes (temporal URL)</a></li>
     </ul>
-</main>
 <?php
 include "templates/footer.php";
 ?>

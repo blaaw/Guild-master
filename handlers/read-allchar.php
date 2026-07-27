@@ -1,4 +1,5 @@
 <?php
+include("../templates/header.php");
 include("../includes/db.php");
 // FUNCIONA PERO SI LO MUEVO A ROOT NO VA, SI LO LLAMO DESDE INCLUDE NO VA, SI NOSE QUE POLLAS QUE LE FOLLEN
 $characters = getCharacters();
@@ -21,4 +22,5 @@ foreach($characters as $character) {
             </ul>
     </div>";
 }
-echo $charHTML;
+echo "<div class='cards'>" . $charHTML . "</div>";
+include("../templates/footer.php");

@@ -1,7 +1,6 @@
 <?php
 include "templates/header.php";
 ?>
-<main>
 <form action="handlers/create.php" method="post" enctype="multipart/form-data">
     <label for="name">
         Name: 
@@ -45,7 +44,6 @@ include "templates/header.php";
     <br>
     <button type="submit">Create Character</button>
 </form>
-</main>
 <?php
 include "templates/footer.php";
 ?>
