@@ -15,6 +15,7 @@ include "templates/header.php";
    <ul>
       <li><a href="create-form.php">Create new Character</a></li>
       <li><a href="readall-page.php">See all Charactes</a></li>
+      <li><a href="search-character.php">Search for a Character</a></li>
     </ul>
 <?php
 include "templates/footer.php";

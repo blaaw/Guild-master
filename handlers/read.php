@@ -43,7 +43,7 @@ function getAllCharactersCards() {
 function getSingleCharacterCard($charname) { //works well but i wanna search without case sensitivity
     $character = findCharacter($charname);
     if ($character === "") {
-        return "error, character not found in database";
+        return "error, character not found in database <br>";
     } else {
         return formatCard($character);
     }
