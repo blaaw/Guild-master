@@ -7,12 +7,14 @@ include( __DIR__ . "/../includes/db.php");
 function formatCard($character) {
     $charHTML = "";
     $inventoryHTML = "";
+    $img = $character['avatar'];
 
     foreach ($character['inventory'] as $item) {
         $inventoryHTML .= "<li>{$item}</li>";
     }
 
-    $charHTML .= "<div class='char-card'>  
+    $charHTML .= "<div class='char-card'>
+        <img src='{$img}' alt='' width='100'>
         <h3>{$character['name']}</h3>
             <p>Class: {$character['class']}</p> 
             <p>HP: {$character['HP']}</p> 
