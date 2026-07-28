@@ -10,7 +10,7 @@ function getCharacters() {
 function findCharacter($charname) {
     $allcharacters = getCharacters();
     foreach($allcharacters as $c) {
-        if ($c['name'] === $charname) {
+        if ($charname === $c['name'] || $charname === strtolower($c['name'])) {
             return $c;
         } 
     }

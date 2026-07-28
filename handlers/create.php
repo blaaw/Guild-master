@@ -24,9 +24,21 @@ if ($_POST) {
    include "../includes/db.php";
    $characters = getCharacters();
 
+    foreach ($characters as $character) {
+        $same_name = trim($_POST["name"]) == $character["name"];
+        $same_name_lower =  trim($_POST["name"]) == strtolower($character["name"]);
+        $same_lower_lower = strtolower(trim($_POST["name"])) == strtolower($character["name"]);
+
+        if ( $same_name || $same_name_lower || $same_lower_lower) {
+        $_SESSION["flash"] = "Error: Ya existe un character con ese nombre.";
+        header("Location:../index.php");
+        exit;
+        }
+    }
+
     $characters[] = [ //this is the syntax to append to an array
         "id" => uniqid(),
-        "name" => $_POST["name"],
+        "name" => trim($_POST["name"]),
         "class"=> $_POST["class"],
         "HP"=> $_POST["hp"],
         "gold"=> $_POST["gold"],
