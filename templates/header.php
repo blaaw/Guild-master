@@ -7,5 +7,5 @@
     <title>PHP Guild Master</title>
 </head>
 <body>
-    <h1>Guild Master -- Beckham Lawrence</h1>
+    <h1>Guild Master</h1>
     <main>
