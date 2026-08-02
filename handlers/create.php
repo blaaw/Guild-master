@@ -21,7 +21,7 @@ if ($_POST) {
         mkdir($data_dir,0777);
     } 
     
-   include "../includes/db.php";
+   include __DIR__ . "../includes/db.php";
    $characters = getCharacters();
 
     foreach ($characters as $character) {
