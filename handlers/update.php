@@ -4,7 +4,7 @@ include( __DIR__ . "/../includes/db.php");
 function updateCharacter($charname, $field, $newvalue) {
     $characters = getCharacters();
 
-    foreach($characters as $c) {
+    foreach($characters as &$c) {
         echo "<br> try me" .var_dump($c) ."<br> <br>";
 
         if ($charname === $c["name"] || $charname === strtolower($c["name"])) {
@@ -18,10 +18,10 @@ function updateCharacter($charname, $field, $newvalue) {
             echo var_dump($c["$field"]) . " <-- c field's new value<br>"; //works well
             if (saveCharacters($characters)) {
                 echo "Character Actualizado exitosamente! <br>"; //it prints, later when i check there's no update, why?
-                break;
+                return;
             } else {
                 echo "Ha habido un error intentando actualizar.";
-                break;
+                return;
             }
         } 
     } 
