@@ -1,5 +1,6 @@
 <?php
 include(__DIR__ . "/../includes/db.php");
+session_start();
 function updateCharacter($charname, $field, $newvalue)
 {
     $characters = getCharacters();
@@ -10,16 +11,19 @@ function updateCharacter($charname, $field, $newvalue)
             $eaval_validCharName = findCharacter(trim($newvalue));
 
             if ($eaval_validCharName != "") {
-                echo "Error: ya existe un personaje con ese nombre.";
+                $_SESSION["flash"] = "Error: ya existe un personaje con ese nombre.";
+                header("Location:../index.php");
             } else {
                 $c["$field"] = $newvalue;
 
                 if (saveCharacters($characters)) {
-                    echo "Character Actualizado exitosamente! <br>";
-                    return;
+                    $_SESSION["flash"] = "Character Actualizado exitosamente!";
+                    header("Location:../index.php");
+                    exit;
                 } else {
-                    echo "Ha habido un error intentando actualizar.";
-                    return;
+                    $_SESSION["flash"] = "Ha habido un error intentando actualizar.";
+                    header("Location:../index.php");
+                    exit;
                 }
             }
         }
