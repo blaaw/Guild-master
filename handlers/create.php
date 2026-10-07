@@ -1,4 +1,5 @@
 <?php
+include "../includes/db.php";
 session_start();
 if ($_POST) {
     //IMAGE HANDLER
@@ -21,7 +22,6 @@ if ($_POST) {
         mkdir($data_dir,0777);
     } 
     
-   include "../includes/db.php";
    $characters = getCharacters();
 
     foreach ($characters as $character) {
